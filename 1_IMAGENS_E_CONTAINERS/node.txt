@@ -1,0 +1,65 @@
+npm init -y
+
+npm install express
+
+node app.js
+
+docker build .
+
+docker image ls
+
+docker run -d -p 3000:3000 d4491599e403
+
+docker run -d -p 3000:30000 --name meu_node c013ac255c54
+
+id da image 8e4816ade692
+
+id do container ad5df021a9ae
+
+docker build .
+
+docker pull python
+
+docker run -it python
+
+docker tag 78b1572b5298 minhaimagem
+
+docker tag 78b1572b5298 minhaimagem:minhatag
+
+docker build -t meunode_diferente .
+
+docker build -t meunode_diferente:minhatag_diferente .
+
+docker start  -i compassionate_jemison
+
+docker rmi -f 
+
+elemplo: docker rmi d4491599e403 -f
+
+docker system prune
+
+docker run --rm 
+
+docker run -d -p 3000:30000 --name diferente --rm meunode_diferente
+
+docker run -d -p 3000:3000 --name diferente2 meunode_diferente
+
+docker cp diferente2:/app/app.js ./copia/
+
+docker top 
+
+docker inspect diferente2
+
+docker stats
+
+docker login
+
+docker logout
+
+docker push 
+
+docker build -t efirminov/nodeteste:novaversao .
+
+docker push efirminov/nodeteste:novaversao
+
+docker run --name testando_imagem -p 3000:3000 -d efirminov/nodeteste:novaversao

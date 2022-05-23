@@ -1,0 +1,37 @@
+docker build -t phpmessages .
+
+docker run -d -p 80:80 --name phpmessages_container phpmessages
+
+docker ps
+
+Volumes anônimos
+
+docker run -v /data
+
+docker run -d -p 80:80 --name phpmessages_container --rm -v /data phpmessages
+
+docker volume ls
+
+docker inspect phpmessages_container
+
+docker run -d -p 80:80 --name phpmessages_container -v phpvolume:/var/www/html/messages --rm phpmessages
+
+docker run -d -p 80:80 --name phpmessages_container -v C:\Repositorio\Docker\2_VOLUMES\messages:/var/www/html/messages --rm phpmessages
+
+
+docker -d -p 80:80 --name phpmessages_container -v C:\Repositorio\Docker\2_VOLUMES\:/var/www/html/ --rm phpmessages
+
+docker run -d -p 80:80 --name phpmessages_container -v C:\Repositorio\Docker\2_VOLUMES\:/var/www/html/ --rm phpmessages
+
+docker volume ls
+docker volume create volumeteste
+
+docker run -d -p 80:80 --name phpmessages_container -v volumeteste:/var/www/html/ --rm phpmessages
+
+docker volume rm = nome do Volume
+
+docker volume create vol
+
+docker volume prune
+
+docker run -d -p 80:80 --name phpmessages_container -v volumeleitura:/var/www/html:ro --rm phpmessages
