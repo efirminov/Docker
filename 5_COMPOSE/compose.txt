@@ -1,0 +1,13 @@
+docker-compose up
+
+docker-compose up -d
+
+Comando para parar os conteiner 
+
+docker-compose down
+
+docker build -t flaskcompose .
+
+docker build -t mysqlcompose .
+
+docker-compose ps
